@@ -43,6 +43,7 @@ def translateTextFile(srcFileName, destinationLanguage, destFileName):
     file_object1.write(correcttext)
     file_object1.close()
     
+# Function for tweeting the text saved in translation.txt
 def tweetTranslation(destFileName):
     file_object = open(destFileName, "r")
     tweet = file_object.read()
