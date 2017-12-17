@@ -45,8 +45,9 @@ def translateTextFile(srcFileName, destinationLanguage, destFileName):
 
 # Must input Twitter handle in between single quotes!!! (' ')    
 screenname = input("Enter a user's handle: ")
-getTweets(screenname, 1, True)
 
+# Function calls
+getTweets(screenname, 1, True)
 translateTextFile("source-tweet.txt",'es', "translation.txt")
 
 # Use same file and put all functions in one module - done
