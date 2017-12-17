@@ -4,7 +4,6 @@ Created on Nov 28, 2017
 @author: connorfairman
 '''
 from googletrans import Translator
-from PyQt4 import QtCore
 
 file_object = open("source-tweet.txt", "r")
 tweet = file_object.read()
@@ -18,4 +17,9 @@ file_object1 = open("translation.txt", "w")
 file_object1.truncate(0)
 file_object1.write(translation.text)
 file_object1.close()
+
+
+
+# Instead of watching a file, create a new text file every time you take in a tweet
+######################################################################################
 
