@@ -42,6 +42,11 @@ def translateTextFile(srcFileName, destinationLanguage, destFileName):
     correcttext = translation.text.encode('UTF-8')
     file_object1.write(correcttext)
     file_object1.close()
+    
+def tweetTranslation(destFileName):
+    file_object = open(destFileName, "r")
+    tweet = file_object.read()
+    api.update_status(tweet)
 
 # Must input Twitter handle in between single quotes!!! (' ')    
 screenname = input("Enter a user's handle: ")
@@ -49,6 +54,7 @@ screenname = input("Enter a user's handle: ")
 # Function calls
 getTweets(screenname, 1, True)
 translateTextFile("source-tweet.txt",'es', "translation.txt")
+tweetTranslation("translation.txt")
 
 # Use same file and put all functions in one module - done
 # Combine our parts into one module to get it to run together - done
