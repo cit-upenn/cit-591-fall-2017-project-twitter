@@ -42,7 +42,7 @@ def translateTextFile(srcFileName, destinationLanguage, destFileName):
     correcttext = translation.text.encode('UTF-8')
     file_object1.write(correcttext)
     file_object1.close()
-    
+
 # Function for tweeting the text saved in translation.txt
 def tweetTranslation(destFileName):
     file_object = open(destFileName, "r")
@@ -52,9 +52,11 @@ def tweetTranslation(destFileName):
 # Must input Twitter handle in between single quotes!!! (' ')    
 screenname = input("Enter a user's handle: ")
 language = input("Enter a preferred language code")
+amount = input("Enter the number of tweets to retrieve")
+retweet = input("To retrieve RTs, enter: True, to ignore RTs, enter: False")
 
 # Function calls
-getTweets(screenname, 1, True)
+getTweets(screenname, amount, retweet)
 translateTextFile("source-tweet.txt",language, "translation.txt")
 tweetTranslation("translation.txt")
 
