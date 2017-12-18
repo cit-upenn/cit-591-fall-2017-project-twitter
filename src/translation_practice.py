@@ -53,7 +53,7 @@ def tweetTranslation(destFileName):
 screenname = input("Enter a user's handle (in between single quotes): ")
 language = input("Enter a preferred language code (in between single quotes): ")
 amount = input("Enter the number of tweets to retrieve: ")
-retweet = input("To retrieve RTs, enter: True, to ignore RTs, enter: False")
+retweet = input("To retrieve RTs, enter: True, to ignore RTs, enter: False: ")
 
 # Function calls
 getTweets(screenname, amount, retweet)
