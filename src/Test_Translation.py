@@ -7,7 +7,8 @@ import unittest
 from Secret import consumer_key, access_token, consumer_secret,\
     access_token_secret
 from translation_practice import tweetTranslation, screenname, language,\
-    translateTextFile
+    translateTextFile, getTweets
+from translation_practice import api
 
 class TestTranslation(unittest.TestCase):
 
@@ -41,17 +42,30 @@ class TestTranslation(unittest.TestCase):
     def test_Langauge(self):
         self.assertIs(language, 'es')
 
-# Test to confirm that the translateTextFile function has no return value
+# # Test to confirm that the translateTextFile function has no return value
 # Passes
     def test_translateTextFile(self):
         result = translateTextFile("source-tweet.txt", 'es', "translation.txt")
         self.assertIsNone(result)
-    
+     
 # Test to confirm that tweetTranslation function has no return value
 # Passes
     def test_tweetTranslation(self):
         result = tweetTranslation("translation.txt")
         self.assertIsNone(result)
+         
+# Test to see if API works
+    def test_IfAPIWorks(self):
+        self.assertIsNotNone(api, "API should not be null")
+
+# Test to see if getTweets is NULL 
+    def testIfGetTweetsIsNone(self):
+        self.assertIsNotNone(getTweets('justinbieber', 1, True), "Should not be null")
+ 
+# Test to see if getTweets sends correct message       
+    def testIfGetTweetsSendsCorrectMessage(self):
+        message = "method worked properly"
+        self.assertEquals(message, getTweets('ArianaGrande', 1, False), "Messages should be the same")
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
