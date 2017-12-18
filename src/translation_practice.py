@@ -50,8 +50,8 @@ def tweetTranslation(destFileName):
     api.update_status(tweet)
 
 # Must input Twitter handle in between single quotes!!! (' ')    
-screenname = input("Enter a user's handle: ")
-language = input("Enter a preferred language code")
+screenname = input("Enter a user's handle (in between single quotes): ")
+language = input("Enter a preferred language code (in between single quotes): ")
 amount = input("Enter the number of tweets to retrieve")
 retweet = input("To retrieve RTs, enter: True, to ignore RTs, enter: False")
 
