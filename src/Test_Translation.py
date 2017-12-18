@@ -6,9 +6,9 @@ Created on Dec 17, 2017
 import unittest
 from Secret import consumer_key, access_token, consumer_secret,\
     access_token_secret
-from translation_practice import tweetTranslation, screenname, language,\
+from tweet_translation import tweetTranslation, screenname, language,\
     translateTextFile, getTweets
-from translation_practice import api
+from tweet_translation import api
 
 class TestTranslation(unittest.TestCase):
 
