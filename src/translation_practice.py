@@ -60,9 +60,5 @@ getTweets(screenname, amount, retweet)
 translateTextFile("source-tweet.txt",language, "translation.txt")
 tweetTranslation("translation.txt")
 
-# Use same file and put all functions in one module - done
-# Combine our parts into one module to get it to run together - done
-# Look up Python testing - done(ish) Still need to implement unittesting and pyCoverage
-# structure code above into unique functions - done
-######################################################################################
+
 
