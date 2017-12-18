@@ -4,7 +4,7 @@ Created on Nov 28, 2017
 @author: connorfairman
 '''
 from __future__ import unicode_literals
-from Secret import consumer_key, consumer_secret, access_token, access_token_secret
+from secret import consumer_key, consumer_secret, access_token, access_token_secret
 import tweepy
 from googletrans import Translator
 

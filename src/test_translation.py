@@ -4,7 +4,7 @@ Created on Dec 17, 2017
 @author: connorfairman
 '''
 import unittest
-from Secret import consumer_key, access_token, consumer_secret,\
+from secret import consumer_key, access_token, consumer_secret,\
     access_token_secret
 from tweet_translation import tweetTranslation, screenname, language,\
     translateTextFile, getTweets
